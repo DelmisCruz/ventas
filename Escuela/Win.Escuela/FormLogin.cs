@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BL.Escuela;
+using System;
 using System.Windows.Forms;
 
 namespace Win.Escuela
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,13 +32,15 @@ namespace Win.Escuela
             usuario1 = textBox1.Text;
             contrasena1 = textBox2.Text;
 
-            if (usuario == "master" && contrasena == "123")
+            var resultado = _seguridad.Autorizar(usuario, contrasena, usuario1, contrasena1);
+
+            if (resultado == true)
             {
                 this.Close();
             }
             else
             {
-                if (usuario1 == "estu" && contrasena1 == "456")
+                if (resultado == true)
                 {
                     this.Close();
                 }
