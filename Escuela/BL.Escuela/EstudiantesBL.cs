@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,58 +10,20 @@ namespace BL.Escuela
 {
     public class EstudiantesBL
     {
+        Contexto _contexto;
         public BindingList<Estudiante> ListaEstudiantes { get; set; }
 
         public EstudiantesBL()
         {
+            _contexto = new Contexto();
             ListaEstudiantes = new BindingList<Estudiante>();
-
-            var estudiante1 = new Estudiante();
-            estudiante1.Id = 1;
-            estudiante1.Cedula = "0501-2004-03733";
-            estudiante1.Nombre = "Delmis";
-            estudiante1.Apellido = "Rosa";
-            estudiante1.Edad = 12;
-            estudiante1.Celular = "9756-1972";
-            estudiante1.Correo = "delmismarisela17@gmail.com";
-            estudiante1.Grado = "Sexto";
-            estudiante1.Clases = 10;
-            estudiante1.Activo = true;
-
-            ListaEstudiantes.Add(estudiante1);
-
-            var estudiante2 = new Estudiante();
-            estudiante2.Id = 2;
-            estudiante2.Cedula = "0501-2012-98900";
-            estudiante2.Nombre = "Alejandra";
-            estudiante2.Apellido = "Bueso";
-            estudiante2.Edad = 9;
-            estudiante2.Celular = "33599260";
-            estudiante2.Correo = "alemabu.bueso@gmail.com";
-            estudiante2.Grado = "Cuarto";
-            estudiante2.Clases = 8;
-            estudiante2.Activo = true;
-
-            ListaEstudiantes.Add(estudiante2);
-
-            var estudiante3 = new Estudiante();
-            estudiante3.Id = 3;
-            estudiante3.Cedula = "0501-2011-23455";
-            estudiante3.Nombre = "Ina";
-            estudiante3.Apellido = "Cueva";
-            estudiante3.Edad = 11;
-            estudiante3.Celular = "88793976";
-            estudiante3.Correo = "inacueva2@gmail.com";
-            estudiante3.Grado = "Tercero";
-            estudiante3.Clases = 7;
-            estudiante3.Activo = true;
-
-            ListaEstudiantes.Add(estudiante3);
-
         }
 
         public BindingList<Estudiante> ObtenerEstudiantes()
         {
+            _contexto.Estudiantes.Load();
+            ListaEstudiantes = _contexto.Estudiantes.Local.ToBindingList();
+
             return ListaEstudiantes;
         }
 
@@ -72,10 +35,8 @@ namespace BL.Escuela
                 return resultado;
             }
 
-            if (estudiante.Id == 0)
-            {
-                estudiante.Id = ListaEstudiantes.Max(item => item.Id) + 1;
-            }
+            _contexto.SaveChanges(); // el contexto representa nuestra bd
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -93,6 +54,7 @@ namespace BL.Escuela
                 if (estudiante.Id == id)
                 {
                     ListaEstudiantes.Remove(estudiante);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }

@@ -34,6 +34,7 @@ namespace Win.Escuela
             {
                 listaEstudiantesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Estudiante Guardado");
             }
             else
             {
