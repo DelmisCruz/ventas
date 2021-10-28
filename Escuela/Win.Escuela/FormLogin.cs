@@ -27,6 +27,10 @@ namespace Win.Escuela
             string usuario1;
             string contrasena1;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
             usuario1 = textBox1.Text;

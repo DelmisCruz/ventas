@@ -27,6 +27,15 @@ namespace BL.Escuela
             return ListaEstudiantes;
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
         public Resultado GuardarEstudiante(Estudiante estudiante)
         {
             var resultado = Validar(estudiante);
@@ -91,11 +100,7 @@ namespace BL.Escuela
                 resultado.Mensaje = "Ingrese un correo valido";
                 resultado.Exitoso = false;
             }
-            if (string.IsNullOrEmpty(estudiante.Grado) == true)
-            {
-                resultado.Mensaje = "Ingrese un Grado de primero hasta sexto";
-                resultado.Exitoso = false;
-            }
+
             if (estudiante.Edad <= 0)
             {
                 resultado.Mensaje = "La edad no debe ser menor que cero";
@@ -107,6 +112,11 @@ namespace BL.Escuela
                 resultado.Exitoso = false;
             }
 
+            if (estudiante.GradoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Grado";
+                resultado.Exitoso = false;
+            }
             return resultado;
         }
     }
@@ -114,13 +124,15 @@ namespace BL.Escuela
     public class Estudiante
     {
         public int Id { get; set; }
+        public byte[] Foto { get; set; } //especial
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int Edad { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }
-        public string Grado { get; set; }
+        public int GradoId { get; set; }
+        public Grado Grado  { get; set; }
         public int Clases { get; set; }
         public bool Activo { get; set; }
 
