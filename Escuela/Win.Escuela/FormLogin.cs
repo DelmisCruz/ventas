@@ -52,9 +52,9 @@ namespace Win.Escuela
                 {
                     MessageBox.Show("Usuario  o contraseña Invalido");
                 }
-              
+
             }
- 
+
         }
     }
 }

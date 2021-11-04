@@ -8,29 +8,30 @@ using System.Threading.Tasks;
 
 namespace BL.Escuela
 {
-    public class ClasesBL
+    public class PagosBL
     {
         Contexto _contexto;
-        public BindingList<Clase> ListaClases { get; set; }
+        public BindingList<Pago> ListaPagos { get; set; }
 
-        public ClasesBL()
+        public PagosBL()
         {
             _contexto = new Contexto();
-            ListaClases = new BindingList<Clase>();
+            ListaPagos = new BindingList<Pago>();
         }
 
-        public BindingList<Clase> ObtenerClases()
+        public BindingList<Pago> ObtenerPagos()
         {
-            _contexto.Clases.Load();
-            ListaClases = _contexto.Clases.Local.ToBindingList();
+            _contexto.Pagos.Load();
+            ListaPagos = _contexto.Pagos.Local.ToBindingList();
 
-            return ListaClases;
+            return ListaPagos;
         }
     }
-    public class Clase
+    public class Pago
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public double Pago { get; set; }
+        public int Precio { get; set; }
     }
 }
+

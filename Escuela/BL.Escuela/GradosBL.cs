@@ -31,5 +31,6 @@ namespace BL.Escuela
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
+        public double Mensualidad { get; set; }
     }
 }

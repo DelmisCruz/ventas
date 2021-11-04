@@ -8,20 +8,32 @@ namespace BL.Escuela
 {
     public class SeguridadBL
     {
-       public bool Autorizar(string usuario, string contrasena, string usuario1, string contrasena1)
+        Contexto _contexto;
+
+        public SeguridadBL()
         {
-            if (usuario == "master" && contrasena == "123")
+            _contexto = new Contexto();
+        }
+
+        public bool Autorizar(string usuario, string contrasena, string usuario1, string contrasena1)
+        {
+            var usuarios = _contexto.Usuarios.ToList();
+
+            foreach (var usuarioDB in usuarios)
             {
-                return true;
-            }
-            else
-            {
-                if (usuario1 == "estu" && contrasena1 == "456")
+                if (usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
                 {
                     return true;
                 }
             }
-                return false;
+            return false;
         }
+    }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Contrasena { get; set; }
     }
 }

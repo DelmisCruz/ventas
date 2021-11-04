@@ -75,6 +75,14 @@ namespace BL.Escuela
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (estudiante == null) // agregarla a maestros
+            {
+                resultado.Mensaje = "Agregue un estudiante valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(estudiante.Cedula) == true)
             {
                 resultado.Mensaje = "Ingrese un numero de cedula";
@@ -83,11 +91,6 @@ namespace BL.Escuela
             if (string.IsNullOrEmpty(estudiante.Nombre) == true)
             {
                 resultado.Mensaje = "Ingrese un Nombre";
-                resultado.Exitoso = false;
-            }
-            if (string.IsNullOrEmpty(estudiante.Apellido) == true)
-            {
-                resultado.Mensaje = "Ingrese un Apellido";
                 resultado.Exitoso = false;
             }
             if (string.IsNullOrEmpty(estudiante.Celular) == true)
@@ -106,9 +109,9 @@ namespace BL.Escuela
                 resultado.Mensaje = "La edad no debe ser menor que cero";
                 resultado.Exitoso = false;
             }
-            if (estudiante.Clases <= 0)
+            if (string.IsNullOrEmpty(estudiante.Direccion) == true)
             {
-                resultado.Mensaje = "Las clases deben ser mayor a 0";
+                resultado.Mensaje = "Ingrese una Direccion";
                 resultado.Exitoso = false;
             }
 
@@ -127,13 +130,12 @@ namespace BL.Escuela
         public byte[] Foto { get; set; } //especial
         public string Cedula { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public int Edad { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }
         public int GradoId { get; set; }
         public Grado Grado  { get; set; }
-        public int Clases { get; set; }
+        public string Direccion { get; set; }
         public bool Activo { get; set; }
 
     }

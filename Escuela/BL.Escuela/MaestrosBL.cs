@@ -68,10 +68,19 @@ namespace BL.Escuela
             }
             return false;
         }
+
         private Resultado1 validar(Maestro maestro)
         {
             var resultado1 = new Resultado1();
             resultado1.Exitoso = true;
+
+            if (maestro == null) 
+            {
+                resultado1.Mensaje = "Agregue un maestro valido";
+                resultado1.Exitoso = false;
+
+                return resultado1;
+            }
 
             if (string.IsNullOrEmpty(maestro.Cedula) == true)
             {
@@ -83,9 +92,9 @@ namespace BL.Escuela
                 resultado1.Mensaje = "Ingrese un Nombre";
                 resultado1.Exitoso = false;
             }
-            if (string.IsNullOrEmpty(maestro.Apellido) == true)
+            if (string.IsNullOrEmpty(maestro.Direccion) == true)
             {
-                resultado1.Mensaje = "Ingrese un Apellido";
+                resultado1.Mensaje = "Ingrese una Direccion";
                 resultado1.Exitoso = false;
             }
             if (string.IsNullOrEmpty(maestro.Celular) == true)
@@ -126,7 +135,7 @@ namespace BL.Escuela
         public byte[] Foto { get; set; } //especial
         public string Cedula { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public string Direccion { get; set; }
         public int Edad { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }

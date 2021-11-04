@@ -69,6 +69,12 @@
     <Compile Include="FormEstudiante.Designer.cs">
       <DependentUpon>FormEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <EmbeddedResource Include="FormEstudiante.resx">
       <DependentUpon>FormEstudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +133,7 @@
     <None Include="Properties\DataSources\BL.Escuela.ClasesBL.datasource" />
     <None Include="Properties\DataSources\BL.Escuela.Estudiante.datasource" />
     <None Include="Properties\DataSources\BL.Escuela.EstudiantesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Escuela.FacturaBL.datasource" />
     <None Include="Properties\DataSources\BL.Escuela.GradosBL.datasource" />
     <None Include="Properties\DataSources\BL.Escuela.MaestrosBL.datasource" />
     <None Include="Properties\DataSources\BL.Escuela.SeguridadBL.datasource" />
