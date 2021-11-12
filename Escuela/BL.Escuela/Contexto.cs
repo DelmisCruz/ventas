@@ -26,6 +26,6 @@ namespace BL.Escuela
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Clase> Clases { get; set; }
         public DbSet<Factura> Facturas { get; set; }
-        public DbSet <Pago> Pagos { get; set; }
+        public DbSet<Factura1> Facturas1 { get; set; }
     }
 }

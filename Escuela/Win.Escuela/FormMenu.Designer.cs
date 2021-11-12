@@ -32,14 +32,15 @@
             this.escuelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaMaestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeMaestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,8 +61,8 @@
             this.escuelaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estudianteToolStripMenuItem,
             this.maestroToolStripMenuItem,
-            this.matriculaToolStripMenuItem,
-            this.facturaToolStripMenuItem});
+            this.facturaToolStripMenuItem,
+            this.facturaMaestrosToolStripMenuItem});
             this.escuelaToolStripMenuItem.Name = "escuelaToolStripMenuItem";
             this.escuelaToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.escuelaToolStripMenuItem.Text = "Escuela";
@@ -80,13 +81,6 @@
             this.maestroToolStripMenuItem.Text = "Maestro";
             this.maestroToolStripMenuItem.Click += new System.EventHandler(this.maestroToolStripMenuItem_Click);
             // 
-            // matriculaToolStripMenuItem
-            // 
-            this.matriculaToolStripMenuItem.Name = "matriculaToolStripMenuItem";
-            this.matriculaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.matriculaToolStripMenuItem.Text = "Matricula";
-            this.matriculaToolStripMenuItem.Click += new System.EventHandler(this.matriculaToolStripMenuItem_Click);
-            // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
@@ -94,12 +88,20 @@
             this.facturaToolStripMenuItem.Text = "Factura Estudiantes";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
+            // facturaMaestrosToolStripMenuItem
+            // 
+            this.facturaMaestrosToolStripMenuItem.Name = "facturaMaestrosToolStripMenuItem";
+            this.facturaMaestrosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.facturaMaestrosToolStripMenuItem.Text = "Factura Maestros";
+            this.facturaMaestrosToolStripMenuItem.Click += new System.EventHandler(this.facturaMaestrosToolStripMenuItem_Click);
+            // 
             // reporteToolStripMenuItem
             // 
             this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeEstudianteToolStripMenuItem,
             this.reporteDeMaestroToolStripMenuItem,
-            this.reporteDeMatriculaToolStripMenuItem});
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem,
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.reporteToolStripMenuItem.Text = "Reporte";
@@ -107,20 +109,23 @@
             // reporteDeEstudianteToolStripMenuItem
             // 
             this.reporteDeEstudianteToolStripMenuItem.Name = "reporteDeEstudianteToolStripMenuItem";
-            this.reporteDeEstudianteToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.reporteDeEstudianteToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeEstudianteToolStripMenuItem.Text = "Reporte de Estudiante";
+            this.reporteDeEstudianteToolStripMenuItem.Click += new System.EventHandler(this.reporteDeEstudianteToolStripMenuItem_Click);
             // 
             // reporteDeMaestroToolStripMenuItem
             // 
             this.reporteDeMaestroToolStripMenuItem.Name = "reporteDeMaestroToolStripMenuItem";
-            this.reporteDeMaestroToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.reporteDeMaestroToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeMaestroToolStripMenuItem.Text = "Reporte de Maestro";
+            this.reporteDeMaestroToolStripMenuItem.Click += new System.EventHandler(this.reporteDeMaestroToolStripMenuItem_Click);
             // 
-            // reporteDeMatriculaToolStripMenuItem
+            // reporteDeFacturaDeEstudiantesToolStripMenuItem
             // 
-            this.reporteDeMatriculaToolStripMenuItem.Name = "reporteDeMatriculaToolStripMenuItem";
-            this.reporteDeMatriculaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.reporteDeMatriculaToolStripMenuItem.Text = "Reporte de Matricula";
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Name = "reporteDeFacturaDeEstudiantesToolStripMenuItem";
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Text = "Reporte de Factura de Estudiantes";
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturaDeEstudiantesToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -136,6 +141,13 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // reporteDeFacturasDeMaestrosToolStripMenuItem
+            // 
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem.Name = "reporteDeFacturasDeMaestrosToolStripMenuItem";
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem.Text = "Reporte de Facturas de Maestros";
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasDeMaestrosToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -162,13 +174,14 @@
         private System.Windows.Forms.ToolStripMenuItem escuelaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estudianteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maestroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matriculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeEstudianteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeMaestroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeMatriculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaMaestrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeFacturaDeEstudiantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasDeMaestrosToolStripMenuItem;
     }
 }

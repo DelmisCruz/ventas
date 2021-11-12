@@ -60,6 +60,41 @@ namespace Win.Escuela
             formFactura.MdiParent = this;
             formFactura.Show();
         }
+
+        private void facturaMaestrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFacturaMaestro = new FormFacturaMaestro();
+            formFacturaMaestro.MdiParent = this;
+            formFacturaMaestro.Show();
+        }
+
+        private void reporteDeEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteEstudiantes = new FormReporteEstudiantes();
+            formReporteEstudiantes.MdiParent = this;
+            formReporteEstudiantes.Show();
+        }
+
+        private void reporteDeFacturaDeEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturasEstudiantes = new FormReporteFacturasEstudiantes();
+            formReporteFacturasEstudiantes.MdiParent = this;
+            formReporteFacturasEstudiantes.Show();
+        }
+
+        private void reporteDeFacturasDeMaestrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturasMaestros = new FormReporteFacturasMaestros();
+            formReporteFacturasMaestros.MdiParent = this;
+            formReporteFacturasMaestros.Show();
+        }
+
+        private void reporteDeMaestroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteMaestros = new FormReporteMaestros();
+            formReporteMaestros.MdiParent = this;
+            formReporteMaestros.Show();
+        }
     }
 
 }
