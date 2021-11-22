@@ -1,5 +1,6 @@
 ﻿namespace BL.Escuela
 {
+
    // public class Usuario
    // {
      //   internal string contrasena;
