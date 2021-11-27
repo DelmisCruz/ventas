@@ -57,12 +57,13 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(521, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(894, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // escuelaToolStripMenuItem
             // 
+            this.escuelaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.escuelaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estudianteToolStripMenuItem,
             this.maestroToolStripMenuItem,
@@ -74,6 +75,8 @@
             // 
             // estudianteToolStripMenuItem
             // 
+            this.estudianteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.estudianteToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
             this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.estudianteToolStripMenuItem.Text = "Estudiante";
@@ -81,6 +84,8 @@
             // 
             // maestroToolStripMenuItem
             // 
+            this.maestroToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.maestroToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.maestroToolStripMenuItem.Name = "maestroToolStripMenuItem";
             this.maestroToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.maestroToolStripMenuItem.Text = "Maestro";
@@ -88,6 +93,8 @@
             // 
             // facturaToolStripMenuItem
             // 
+            this.facturaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.facturaToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
             this.facturaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.facturaToolStripMenuItem.Text = "Factura Estudiantes";
@@ -95,6 +102,8 @@
             // 
             // facturaMaestrosToolStripMenuItem
             // 
+            this.facturaMaestrosToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.facturaMaestrosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.facturaMaestrosToolStripMenuItem.Name = "facturaMaestrosToolStripMenuItem";
             this.facturaMaestrosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.facturaMaestrosToolStripMenuItem.Text = "Factura Maestros";
@@ -102,6 +111,7 @@
             // 
             // reporteToolStripMenuItem
             // 
+            this.reporteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeEstudianteToolStripMenuItem,
             this.reporteDeMaestroToolStripMenuItem,
@@ -113,6 +123,7 @@
             // 
             // reporteDeEstudianteToolStripMenuItem
             // 
+            this.reporteDeEstudianteToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.reporteDeEstudianteToolStripMenuItem.Name = "reporteDeEstudianteToolStripMenuItem";
             this.reporteDeEstudianteToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeEstudianteToolStripMenuItem.Text = "Reporte de Estudiante";
@@ -120,6 +131,7 @@
             // 
             // reporteDeMaestroToolStripMenuItem
             // 
+            this.reporteDeMaestroToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.reporteDeMaestroToolStripMenuItem.Name = "reporteDeMaestroToolStripMenuItem";
             this.reporteDeMaestroToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeMaestroToolStripMenuItem.Text = "Reporte de Maestro";
@@ -127,6 +139,7 @@
             // 
             // reporteDeFacturaDeEstudiantesToolStripMenuItem
             // 
+            this.reporteDeFacturaDeEstudiantesToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Name = "reporteDeFacturaDeEstudiantesToolStripMenuItem";
             this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeFacturaDeEstudiantesToolStripMenuItem.Text = "Reporte de Factura de Estudiantes";
@@ -134,6 +147,7 @@
             // 
             // reporteDeFacturasDeMaestrosToolStripMenuItem
             // 
+            this.reporteDeFacturasDeMaestrosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.reporteDeFacturasDeMaestrosToolStripMenuItem.Name = "reporteDeFacturasDeMaestrosToolStripMenuItem";
             this.reporteDeFacturasDeMaestrosToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.reporteDeFacturasDeMaestrosToolStripMenuItem.Text = "Reporte de Facturas de Maestros";
@@ -141,6 +155,7 @@
             // 
             // seguridadToolStripMenuItem
             // 
+            this.seguridadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
@@ -149,6 +164,7 @@
             // 
             // loginToolStripMenuItem
             // 
+            this.loginToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.loginToolStripMenuItem.Text = "Login";
@@ -159,10 +175,10 @@
             this.statusStrip1.BackColor = System.Drawing.Color.Turquoise;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 460);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 483);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 26, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(521, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(894, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -177,16 +193,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 482);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Win.Escuela.Properties.Resources.Logo_C__y_T1__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(894, 505);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormMenu";
             this.Text = "Menu Principal";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.menuStrip1.ResumeLayout(false);

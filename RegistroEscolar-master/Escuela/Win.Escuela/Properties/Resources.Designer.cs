@@ -79,5 +79,15 @@ namespace Win.Escuela.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_C__y_T1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo C. y T1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
